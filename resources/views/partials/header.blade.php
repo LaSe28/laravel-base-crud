@@ -1,5 +1,5 @@
 <header>
     <h1>
-        Store di Comics
+        Comics Store
     </h1>
 </header>
