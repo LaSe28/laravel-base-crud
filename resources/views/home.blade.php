@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="card-container">
         @foreach ($comics as $comic)
             <div class="card">
                 <img src="{{$comic->image_URL}}" alt="">
