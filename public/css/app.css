@@ -136,9 +136,29 @@ footer .footer-container {
   height: 100%;
   margin: auto;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer-container .list {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer .footer-container ul {
   list-style: none;
+}
+
+footer .footer-container ul h3 {
+  padding-bottom: 1rem;
+}
+
+footer .footer-container .images {
+  align-self: flex-end;
+}
+
+footer .footer-container .images img {
+  width: 100px;
 }
 

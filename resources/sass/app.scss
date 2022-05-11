@@ -127,8 +127,26 @@ footer{
         height: 100%;
         margin: auto;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .list{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+
+        }
         ul{
             list-style: none;
+            h3{
+                padding-bottom: 1rem;
+            }
+        }
+        .images{
+            align-self: flex-end;
+            img{
+                width: 100px;
+            }
         }
     }
 }
