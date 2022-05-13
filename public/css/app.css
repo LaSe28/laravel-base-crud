@@ -33,6 +33,14 @@ header a {
   padding: 0.5rem 2rem;
 }
 
+.btn-edit {
+  background-color: darkred;
+}
+
+.btn-destroy {
+  background-color: black;
+}
+
 .card-container {
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.7);
@@ -42,19 +50,43 @@ header a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
 }
 
 .card-container .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 200px;
   margin: 2rem;
   color: white;
+  overflow: hidden;
 }
 
 .card-container .card a {
   color: white;
   text-decoration: none;
+}
+
+.card-container .btn-container {
+  display: flex;
+}
+
+.card-container .btn-container .btn {
+  box-shadow: none;
+  width: 50%;
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card-container .btn-container button {
+  font-size: 1rem;
+  padding: 0.4rem 0.2rem;
+  border: none;
+  color: white;
+  width: 50%;
+  text-align: center;
 }
 
 .comic-container {
@@ -63,6 +95,7 @@ header a {
   box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.7);
   margin: auto;
   display: flex;
+  align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.7);
   padding-top: 5rem;
   color: white;
@@ -80,6 +113,29 @@ header a {
 
 .comic-container .comic-text p {
   line-height: 1.5rem;
+}
+
+.comic-container .btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comic-container .btn-container .btn {
+  box-shadow: none;
+  width: 150%;
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+
+.comic-container .btn-container button {
+  font-size: 1rem;
+  padding: 0.4rem 0.2rem;
+  border: none;
+  color: white;
+  width: 150%;
+  text-align: center;
 }
 
 .container {
