@@ -28,7 +28,7 @@
             </div>
         </div>
         <button class="btn" type="submit">Salva le modifiche</button>
-        <a class="btn" href="{{ ulr()->previous() }}"></a>
+        <a class="btn" href="{{ url()->previous() }}">Annulla</a>
     </form>
 </div>
 
