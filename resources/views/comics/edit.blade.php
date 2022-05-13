@@ -5,6 +5,15 @@
 
 
 <div class="container">
+    @if ($errors->any())
+        <div class="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form method="POST" action="{{route('comics.update', $comic->id)}}">
         @csrf
         @method('PUT')
@@ -27,8 +36,10 @@
                 <textarea name="description" id="description" rows="4">{{$comic->description}}</textarea>
             </div>
         </div>
-        <button class="btn" type="submit">Salva le modifiche</button>
-        <a class="btn" href="{{ url()->previous() }}">Annulla</a>
+        <div class="btn-container">
+            <button class="btn" type="submit">Salva le modifiche</button>
+            <a class="btn" href="{{ url()->previous() }}">Annulla</a>
+        </div>
     </form>
 </div>
 

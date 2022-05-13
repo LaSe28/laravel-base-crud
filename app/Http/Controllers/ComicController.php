@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+
+    protected $validator = [
+        'title' =>'required|unique:comics|min:5|max:50',
+        'image_URL' => 'url',
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -36,6 +41,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->validator, [
+            'image_URL.url' => 'Inserisci un URL valido',
+            'title.min' => 'Inserisci almeno 5 caratteri'
+        ]);
+
         $submitted = $request->all();
         $newComic = Comic::create($submitted);
         return redirect()->route('comics.show', $newComic->id);
@@ -74,6 +84,11 @@ class ComicController extends Controller
      */
     public function update(Request $request, comic $comic)
     {
+        $request->validate($this->validator, [
+            'image_URL.url' => 'Inserisci un URL valido',
+            'title.min' => 'Inserisci almeno 5 caratteri'
+        ]);
+
         $submitted = $request->all();
         $comic->update($submitted);
         return redirect()->route('comics.show', $comic->id);

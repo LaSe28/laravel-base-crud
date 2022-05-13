@@ -8,6 +8,65 @@ html {
   font-family: Helvetica, sans-serif;
 }
 
+.alert {
+  color: red;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup .message {
+  height: 150px;
+  width: 300px;
+  background-color: lightcoral;
+  border-radius: 1rem;
+}
+
+.popup .message p {
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.popup .btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.popup .btn-container .btn {
+  color: white;
+  box-shadow: none;
+  width: 40%;
+  margin: 0.3rem;
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.popup .btn-container button {
+  font-size: 1rem;
+  padding: 0.4rem 0.2rem;
+  border: none;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
 header {
   background-color: black;
   height: 5rem;
@@ -33,12 +92,20 @@ header a {
   padding: 0.5rem 2rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .btn-edit {
   background-color: darkred;
 }
 
 .btn-destroy {
   background-color: black;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .card-container {
@@ -70,6 +137,7 @@ header a {
 
 .card-container .btn-container {
   display: flex;
+  justify-content: center;
 }
 
 .card-container .btn-container .btn {
@@ -78,15 +146,6 @@ header a {
   padding: 0.4rem 0.2rem;
   text-align: center;
   vertical-align: middle;
-}
-
-.card-container .btn-container button {
-  font-size: 1rem;
-  padding: 0.4rem 0.2rem;
-  border: none;
-  color: white;
-  width: 50%;
-  text-align: center;
 }
 
 .comic-container {
@@ -177,6 +236,19 @@ header a {
 
 .container form button {
   border: 1.5px solid lightcoral;
+}
+
+.container .btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container .btn-container .btn {
+  box-shadow: none;
+  padding: 0.5rem 0.3rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0.3rem;
 }
 
 footer {

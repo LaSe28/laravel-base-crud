@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body style="background: url({{asset('images/background.jpeg')}})">
+
     @include('partials.header')
 
     @yield('content')
