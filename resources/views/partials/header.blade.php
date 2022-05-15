@@ -1,6 +1,6 @@
 <header>
     <h1>
-        Comics Store
+        Comics
     </h1>
     <div>
         <a class="" href="{{route('comics')}}">All Comics</a>
