@@ -15,24 +15,26 @@
 
         <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
             <div class="btn-container">
-                <a id="abort" class="btn btn-edit">Annulla</a>
+                <a id="abort" class="mybtn mybtn-edit">Annulla</a>
                 @csrf
                 @method('DELETE')
-                <button id="delete" class="btn btn-destroy">Elimina</button>
+                <button id="delete" class="mybtn mybtn-destroy">Elimina</button>
             </div>
         </form>
     </div>
 </div>
 <div>
-    <div class="comic-container">
-        <img src="{{$comic->image_URL}}" alt="">
-        <div class="comic-text">
-            <h2>{{$comic->title}}</h2>
-            <p>{{$comic->description}}</p>
-        </div>
-        <div class="btn-container">
-            <a class="btn btn-edit" href="{{route('comics.edit', $comic->id)}}">Modifica</a>
-            <button id="delBtn" class="btn btn-destroy">Elimina</button>
+    <div class="overflow-auto container-fluid">
+        <div class="row  comic-info justify-content-center">
+            <img class="col-lg-4 mb-5 col-md-6 col-sm-4 col-6" src="{{$comic->image_URL}}" alt="">
+            <div class="col-lg-6 col-md-10 col-sm-10 col-9" class="comic-text">
+                <h2>{{$comic->title}}</h2>
+                <p>{{$comic->description}}</p>
+            </div>
+            <div class="col-4 gap-3 justify-content-center row">
+                <a class="mybtn mybtn-edit text-center offset-lg-4 col-lg-2" href="{{route('comics.edit', $comic->id)}}">Modifica</a>
+                <button id="delBtn" class="mybtn mybtn-destroy col-lg-2">Elimina</button>
+            </div>
         </div>
     </div>
 </div>

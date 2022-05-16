@@ -5,7 +5,7 @@
 
 <div class="container">
     @if ($errors->any())
-        <div class="alert">
+        <div class="alert alert-danger" role="alert">
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{$error}}</li>
@@ -34,7 +34,7 @@
                 <textarea name="description" id="description" rows="4"></textarea>
             </div>
         </div>
-        <button class="btn" type="submit">Crea!</button>
+        <button class="mybtn" type="submit">Crea!</button>
     </form>
 </div>
 

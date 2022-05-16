@@ -1,5 +1,7 @@
 //
 // genereali ********************************************************
+@import "node_modules/bootstrap/scss/bootstrap";
+
 *{
     margin: 0;
     padding: 0;
@@ -10,31 +12,28 @@ html{
     font-family:Helvetica, sans-serif;
 }
 
-.btn{
+.mybtn{
     background-color: white;
     box-shadow: 10px 16px 30px -2px rgba(0,0,0,0.62);
     color: darkred;
     border: 1px solid darkred;
     text-decoration: none;
     padding: .5rem 2rem;
+    border-radius: .3rem;
     &:hover{
         cursor: pointer;
     }
 }
-.btn-edit{
-    background-color: darkred;
-}
-.btn-destroy{
+
+.mybtn-destroy{
     background-color: black;
 }
 
 button:hover{
     cursor: pointer;
 }
-
-
-.alert{
-    color: red;
+a:hover{
+    color: darkred;
 }
 
 // sezione popup ********************************************************
@@ -50,9 +49,8 @@ button:hover{
     top: 0;
     background-color: rgba($color: #000000, $alpha: 0.5);
     .message{
-        height: 150px;
         width: 300px;
-        background-color: lightcoral;
+        background-color: white;
         border-radius: 1rem;
         p{
             padding: 1rem;
@@ -65,7 +63,9 @@ button:hover{
         width: 100%;
         display: flex;
         justify-content: center;
-        .btn{
+        .mybtn{
+            position: relative;
+            bottom: 1rem;
             border: 1px solid darkred;
             color: darkred;
             background-color: white;
@@ -89,6 +89,7 @@ button:hover{
 // sezione header ********************************************************
 
 header{
+    min-width: 425px;
     height: 5rem;
     color: darkred;
     display: flex;
@@ -104,26 +105,30 @@ header{
         color: darkred;
         text-decoration: none;
         padding: .5rem 2rem;
+        &:hover{
+            color: darkred;
+        }
     }
 }
 
 // sezione home ********************************************************
 
-.card-container{
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
+// .card-container{
+//     padding-top: 5rem;
+//     padding-bottom: 2rem;
+//     width: 1200px;
+//     margin: auto;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: stretch;
     .card{
+        min-width: 220px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 200px;
-        margin: 2rem;
+        border: none;
+        background-color: #eaeaea;
         a{
             color: black;
             text-decoration: none;
@@ -142,7 +147,7 @@ header{
     .btn-container{
         display: flex;
         justify-content: center;
-        .btn{
+        .mybtn{
             color: darkred;
             background-color: white;
             border: 1px solid darkred;
@@ -153,54 +158,63 @@ header{
             vertical-align: middle;
         }
     }
-}
+// }
 
 // sezione show ******************************************************
 
-.comic-container{
-    width: 800px;
-    height: calc(100vh - 22rem);
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    padding-top: 5rem;
+// .comic-container{
+//     width: 800px;
+//     height: calc(100vh - 22rem);
+//     margin: auto;
+//     display: flex;
+//     align-items: flex-start;
+//     padding-top: 5rem;
+//     overflow-y: auto;
+//     img{
+//         height: 70%;
+//         margin-right: 3rem;
+//         border: 1px solid black;
+//         border-radius: .3rem;
+//         box-shadow: 0px 26px 15px -10px rgba(0,0,0,0.88);
+//     }
+//     .comic-text{
+//         h2{
+//             margin-bottom: 2rem;
+//             padding-top: 4rem;
+//         }
+//         p{
+//             line-height: 1.5rem;
+//         }
+//     }
+.comic-info{
+
     img{
-        height: 70%;
-        margin-right: 3rem;
         border: 1px solid black;
         border-radius: .3rem;
         box-shadow: 0px 26px 15px -10px rgba(0,0,0,0.88);
     }
-    .comic-text{
-        h2{
-            margin-bottom: 2rem;
-            padding-top: 4rem;
-        }
-        p{
-            line-height: 1.5rem;
-        }
-    }
-    .btn-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .btn{
-            border: 1px solid darkred;
-            color: darkred;
-            background-color: white;
-            box-shadow: none;
-            margin: .3rem;
-            padding: .4rem .2rem;
-            text-align: center;
-            vertical-align: middle;
-            &:nth-child(2){
-                background-color: #000000;
-                color: white;
-            }
-        }
-    }
+    // .btn-container{
+    //     width: 100%;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     .mybtn{
+    //         border: 1px solid darkred;
+    //         color: darkred;
+    //         background-color: white;
+    //         box-shadow: none;
+    //         margin: .3rem;
+    //         padding: .4rem .2rem;
+    //         text-align: center;
+    //         vertical-align: middle;
+    //         &:nth-child(2){
+    //             background-color: #000000;
+    //             color: white;
+    //         }
+    //     }
+    // }
 }
+// }
 
 // sezione create e update ******************************************************
 
@@ -235,7 +249,7 @@ header{
     .btn-container{
         display: flex;
         justify-content: center;
-        .btn{
+        .mybtn{
             border: 1px solid darkred;
             color: darkred;
             background-color: white;
@@ -256,9 +270,9 @@ footer{
     overflow-y:hidden ;
     color: white;
     .footer-container{
-        background-color: rgba($color: #000000, $alpha: 0.8);
+        background-color: rgba($color: #000000, $alpha: 0.6);
         box-shadow: 0px 0px 50px 29px rgba(0,0,0,0.8);
-        width: 1000px;
+        max-width: 1000px;
         height: 100%;
         margin: auto;
         display: flex;
